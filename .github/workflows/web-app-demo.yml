@@ -20,9 +20,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-         pip install --upgrade pip
-         pip install -r requirements.txt
-         pip install bandit
+         python -m pip install --upgrade pip
+         pip install flask pytest bandit
 
       - name: Run Unit Tests (Pytest)
         run: pytest -v --disable-warnings
